@@ -1,6 +1,6 @@
 <div class="markdown-heading" dir="auto">
-<h2>BOT Mini Caller ver 2.1</h2>
-<h4>Automatic calls using Asterisk<h4>
+<h2>Mini Caller - Asterisk automatic calls</h2>
+<h4>Simple tool for auto calls to contacts from file list<h4>
 <hr>
 <h3>Overview</h3>
 <p>Mini Caller is a Bash script designed to automate outbound calls using Asterisk and a dongle device. It reads phone numbers from a specified file (<code>minicaller_numbers.txt</code>), sets caller ID information, initiates calls, and logs call details.</p>
@@ -29,5 +29,9 @@
 <li>This script assumes a Unix-like environment with Bash and necessary utilities (<code>awk</code>, <code>grep</code>, etc.) installed.</li>
 </ul>
 <h3>License</h3>
-<p>This script is licensed under the <a target="_new" rel="noreferrer">MIT License</a>.</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div>
