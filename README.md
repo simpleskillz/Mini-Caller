@@ -7,7 +7,7 @@
 <h3>Features</h3>
 <ul>
 <li><strong>Automated Calling:</strong> Initiates outbound calls sequentially to numbers listed in <code>minicaller_numbers.txt</code>.</li>
-<li><strong>Caller ID Configuration:</strong> Sets caller ID as "BOT" for each call using Asterisk database commands.</li>
+<li><strong>Caller ID Configuration:</strong> Sets caller ID as "BOT" + Numer for each call using Asterisk database commands.</li>
 <li><strong>Call Progress Monitoring:</strong> Monitors the progress of each call, displaying status updates until completion.</li>
 <li><strong>Logging:</strong> Logs call details including start time, end time, and duration to <code>minicaller_log.txt</code>.</li>
 <li><strong>User Interaction:</strong> Prompts the user to confirm before initiating calls, ensuring manual oversight.</li>
@@ -16,13 +16,26 @@
 <ul>
 <li><strong>Asterisk:</strong> Requires an Asterisk installation with configured dongle device (<code>$DONGLE_DEVICE</code>).</li>
 <li><strong>Authentication:</strong> Uses Asterisk Management Interface (AMI) credentials (<code>$AMI_USER</code>, <code>$AMI_PASS</code>, <code>$AMI_PORT</code>).</li>
+<li><strong>New context in Dialplan:</strong> Setup in extensions_custom.conf file.</li>
 </ul>
 <h3>Usage</h3>
 <ol>
 <li>Ensure Asterisk and the dongle device are properly configured and operational.</li>
 <li>Populate <code>minicaller_numbers.txt</code> with the phone numbers to call.</li>
 <li>Execute the script and follow the prompts to begin calling.</li>
-</ol>
+<li><strong>Add new context to dialplan.</strong></li></ol>
+<div>
+<strong>[mini-caller]</strong><br>
+exten => s,1,Answer()<br>
+exten => s,n,Set(CHANNEL(language)=en)<br>
+exten => s,n,Set(CALLERID(num)=${DB(CALLERID/number)})<br>
+exten => s,n,Set(CALLERID(name)=${DB(CALLERID/name)})<br>
+exten => s,n,Wait(1)<br>
+exten => s,n,Goto(ivr-4,s,1)<br>
+exten => s,n,Hangup()<br>
+</div>
+
+
 <h3>Notes</h3>
 <ul>
 <li>Adjustments may be needed based on specific Asterisk configurations and network conditions.</li>
