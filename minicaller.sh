@@ -13,16 +13,14 @@ NUMBERS_COUNT=$(wc -l < "$NUMBER_FILE")
 # Clear the minicaller_log.txt file
 > "$SUMMARY_FILE"
 echo ""
-echo "########################################"
+echo "###########################"
 echo ""
-echo "SCRIPT: Mini Caller ver. 2.1"
+echo " Mini Caller ver. 2.1"
 echo ""
-echo "START: $(date '+%Y-%m-%d %H:%M:%S')"
-echo ""
-echo "########################################"
+echo "###########################"
 echo ""
 # Display numbers list from the minicaller_numbers.txt file
-echo "Contacts on file list $NUMBERS_COUNT"
+echo "Total call to make: $NUMBERS_COUNT"
 echo ""
 cat "$NUMBER_FILE"
 echo ""
@@ -89,16 +87,16 @@ echo
 
 # Prompt user to start
 while true; do
-    echo "All calls to make: $NUMBERS_COUNT"
+    echo "Total calls to make: $NUMBERS_COUNT"
     echo ""
-    echo "Begin calling? (Y)es or (N)o"
+    echo "Start calling? (Y)es or (N)o"
     read answer
 
     case $answer in
         [Yy]* )
             break;;
         [Nn]* )
-            echo "User declined to start. Exiting script."
+            echo "User declined to start. Stop work."
             exit;;
         * )
             echo "Please enter Y or N";;
