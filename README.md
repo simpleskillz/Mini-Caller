@@ -1,6 +1,6 @@
 <div class="markdown-heading" dir="auto">
-<h2>Mini Caller - Asterisk automatic calls</h2>
-<h4>Simple tool for auto calls to contacts from file list<h4>
+<h2>🟢 Mini Caller - Asterisk Script to automatic calls</h2>
+<h4>🔵 Simple tool for auto calls to contacts from list<h4>
 <hr>
 <h3>Overview</h3>
 <p>Mini Caller is a Bash script designed to automate outbound calls using Asterisk and a dongle device. It reads phone numbers from a specified file (<code>minicaller_numbers.txt</code>), sets caller ID information, initiates calls, and logs call details.</p>
