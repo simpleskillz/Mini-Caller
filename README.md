@@ -12,11 +12,12 @@
 <li><strong>Logging:</strong> Logs call details including start time, end time, and duration to <code>minicaller_log.txt</code>.</li>
 <li><strong>User Interaction:</strong> Prompts the user to confirm before initiating calls, ensuring manual oversight.</li>
 </ul>
-<h3>Requirements</h3>
+<h3>Requirements Soft + Hardware</h3>
 <ul>
 <li><strong>Asterisk:</strong> Requires an Asterisk installation with configured dongle device (<code>$DONGLE_DEVICE</code>).</li>
-<li><strong>Authentication:</strong> Uses Asterisk Management Interface (AMI) credentials (<code>$AMI_USER</code>, <code>$AMI_PASS</code>, <code>$AMI_PORT</code>).</li>
+<li><strong>AMI USER Auth:</strong> Uses Asterisk Management Interface (AMI) credentials (<code>$AMI_USER</code>, <code>$AMI_PASS</code>, <code>$AMI_PORT</code>).</li>
 <li><strong>New context in Dialplan:</strong> Setup in extensions_custom.conf file.</li>
+<li><strong>USB Dongle:</strong> Huawei USB Modem - old version (look in google: "list chan-dongle-modems".</li>
 </ul>
 <h3>Usage</h3>
 <ol>
