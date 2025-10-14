@@ -1,0 +1,10 @@
+# Add new context to dialplan.
+
+[mini-caller]
+exten => s,1,Answer()
+exten => s,n,Set(CHANNEL(language)=en)
+exten => s,n,Set(CALLERID(num)=${DB(CALLERID/number)})
+exten => s,n,Set(CALLERID(name)=${DB(CALLERID/name)})
+exten => s,n,Wait(1)
+exten => s,n,Goto(ivr-4,s,1)
+exten => s,n,Hangup()
