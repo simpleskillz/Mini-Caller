@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="mini-caller-banner.png" alt="Opis banera" width="100%">
+</p>
+
 <div class="markdown-heading" dir="auto">
 <h2>🟢 Mini Caller - Asterisk Script</h2>
 <h2>🔵 Simple tool for auto calls to contacts from list<h2>
